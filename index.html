@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" href="css/main style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="container">
+        <div class="weather-details">
+          <div class="top-section">
+            <p id="current-time" class="current-time pd-1 fs-1"></p>
+            <p id="city-Name"></p>
+            <img
+              src="img/map.ico "
+              id="change-location"
+              alt=""
+              onclick="togglePopup()"
+            />
+          </div>
+          <div class="inner-details">
+            <p id="fell" class="pd-1 fs-1"></p>
+            <p id="humidity" class="pd-1 fs-1"></p>
+            <p id="Wind" class="pd-1 fs-1"></p>
+            <p id="dew-point" class="pd-1 fs-1"></p>
+            <p id="pressure" class="pd-1 fs-1"></p>
+            <p id="uv-index" class="pd-1 fs-1"></p>
+          </div>
+        </div>
+        <div class="icon-weather">
+          <i id="temp-icon" class=""></i>
+          <h1 id="current-temp"></h1>
+          <h2 id="min-max-temp" class="fs-1 pd-1"></h2>
+          <a href="#" class="pd-2 fs-2">More Details</a>
+        </div>
+        <div class="week-weather">
+          <div id="day-1" class="flex"></div>
+          <div id="day-2" class="flex"></div>
+          <div id="day-3" class="flex"></div>
+          <div id="day-4" class="flex"></div>
+          <div id="day-5" class="flex"></div>
+          <div id="day-6" class="flex"></div>
+          <div id="day-7" class="flex"></div>
+        </div>
+        <div class="popup" id="popup-1">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h2>Change Location</h2>
+           
+            <form id="get-city"> 
+              <div class="form-container">
+              <div id="change-city">
+                <label for="cityName" class="fs-1 disp">Enter City Name</label
+                ><input type="text" name="cityName" id="new-city-name" selected/>
+              </div>
+              <button id="submit-button">Submit</button></div>
+            </div>
+            </form>
+          
+        </div>
+    </div>
+    </div>
+    <script src="./scripts/easyHttp.js"></script>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/main UI.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
